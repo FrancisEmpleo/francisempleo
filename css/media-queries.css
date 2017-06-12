@@ -1,0 +1,69 @@
+@media screen and (max-width: 1140px){
+    .intro p{
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 900px){
+    .fe-footer{
+        flex-direction: column;
+    }
+    .fe-footer div:nth-child(1) form{
+        width: 100%;
+        align-items: center;
+    }
+    .fe-footer div:nth-child(1) p{
+        justify-content: center;
+        text-indent: 0;
+    }
+    .fe-footer input, .fe-footer textarea{
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 700px){
+    .scroll-navbar ul li{
+        padding: 7px 0 7px 0 !important;        
+    }
+    .fe-navbar ul li:nth-child(1){
+        margin-left: 0px;
+        justify-content: center;
+        display: none;
+    }
+    .fe-navbar ul li:nth-child(4){
+        margin-right: 0;
+    }
+    .fe-navbar ul{
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+    .fe-navbar ul li{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 587px) {
+    .composition{
+        flex-direction: column;
+    }
+    .composition div {
+        padding: 0;
+    }
+    .composition div:nth-child(1) figure{
+        width: 100px;
+    }
+    .composition div:nth-child(2) figure{
+        width: 120px;
+        height: 100px;
+    }
+    .composition div:nth-child(3) figure{
+        width: 100px;
+        height: 120px;
+    }
+    .composition div:nth-child(2) figure img{
+        width: 120px;
+    }
+}

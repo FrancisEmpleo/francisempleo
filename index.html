@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Francis Empleo - Home</title>
         <link rel="preload" href="images/intro-bg.jpg" as="image">
         <link rel="icon" href="images/wo_name.png" />
         <link rel="stylesheet" href="css/home.css" />
         <link rel="stylesheet" href="css/spinner.css" />
+        <link rel="stylesheet" href="css/media-queries.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300|Noto+Sans:400,400i,700" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -27,19 +29,19 @@
     <div id="no-js">
     <nav class="fe-navbar">
         <ul>
-            <li><a href=""><img src="images/wo_name.png"/></a></li>
-            <li>Home</li>
-            <li>Expertise</li>
-            <li>Contact</li>
+            <li><a href="https://francisempleo.github.io"><img src="images/wo_name.png"/></a></li>
+            <li> <a href="#home" id="Home">Home</a> </li>
+            <li> <a href="#expertise" id="Expertise">Expertise</a> </li>
+            <li> <a href="#contact" id="Contact">Contact</a> </li>
         </ul>
     </nav>
     <div class="fe-wrapper">
-        <section class="fe-section intro-section">
+        <section class="fe-section intro-section" id="home">
             <div class="intro">
                 <p>Hi! I'm <b>Francis</b>, a full stack web developer, <br/> gamer, and a sports fanatic.</p>
             </div>            
         </section>
-        <section class="fe-section composition">
+        <section class="fe-section composition" id="expertise">
             <div>
                 <h1>UX</h1>
                 <figure>
@@ -71,7 +73,7 @@
                 </p>
             </div>
         </section>
-        <footer class="fe-footer">
+        <footer class="fe-footer" id="contact">
             <div>
                 <p>Get in Touch</p>
                 <form action="https://formspree.io/francis.greg.empleo@gmail.com" method="POST">
@@ -104,25 +106,43 @@
     </div>-->
     <script>
 
-    function onReady(callback) {
-        var intervalID = window.setInterval(checkReady, 1000);
-        function checkReady() {
-            if (document.getElementsByTagName('body')[0] !== undefined) {
-                window.clearInterval(intervalID);
-                callback.call(this);
+        function onReady(callback) {
+            var intervalID = window.setInterval(checkReady, 1000);
+            function checkReady() {
+                if (document.getElementsByTagName('body')[0] !== undefined) {
+                    window.clearInterval(intervalID);
+                    callback.call(this);
+                }
             }
         }
-    }
 
-    function show(id, value) {
-        document.getElementById(id).style.display = value ? 'block' : 'none';
-    }
+        function show(id, value) {
+            document.getElementById(id).style.display = value ? 'block' : 'none';
+        }
 
-    onReady(function () {
-        show('no-js', true);
-        show('fe-loader', false);
-    });
+        onReady(function () {
+            show('no-js', true);
+            show('fe-loader', false);
+        });
 
+        $('#Home').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $(this).attr('href') ).offset().top
+            }, 500);
+            return false;
+        });
+        $('#Expertise').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $(this).attr('href') ).offset().top
+            }, 500);
+            return false;
+        });
+        $('#Contact').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $(this).attr('href') ).offset().top
+            }, 500);
+            return false;
+        });
     </script>
 </body>
 </html>

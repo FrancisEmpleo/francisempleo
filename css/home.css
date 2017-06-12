@@ -20,9 +20,11 @@ html , body{
 .scroll-navbar{
     background-color: #ecf0f1;
 }
+.scroll-navbar ul li a{
+    color: #23754b !important;
+}
 .scroll-navbar ul li{
     padding: 0px 10px 0px 10px !important;
-    color: #23754b !important;
 }
 .scroll-navbar ul li img{
     width: 30px !important;
@@ -43,6 +45,7 @@ html , body{
 .fe-navbar ul{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .fe-navbar ul li:nth-child(1){
     flex: 1;
@@ -52,12 +55,17 @@ html , body{
 .fe-navbar ul li:nth-child(4){
     margin-right: 150px;
 }
+
+.fe-navbar ul li a{
+    text-decoration: none;
+    color: #ecf0f1;
+}
 .fe-navbar ul li{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    color: #ecf0f1;
+
 -webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
    -moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
      -o-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
@@ -95,7 +103,6 @@ html , body{
 }
 .composition{
     background-color: white;
-    height: 70vh;
     flex-wrap: wrap;
 }
 .intro p{
@@ -149,6 +156,7 @@ html , body{
     justify-content: center;
     align-items: center;
     background-color: #23754b;
+    flex-wrap: wrap;
 }
 .fe-footer div{
     display: flex;

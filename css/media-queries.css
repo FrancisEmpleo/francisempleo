@@ -2,21 +2,30 @@
     .intro p{
         width: 100%;
         margin: 0;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
         font-size: 25px;
     }
 }
 @media screen and (max-width: 900px){
     .fe-footer{
-        flex-direction: column;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
     }
     .fe-footer div:nth-child(1) form{
         width: 100%;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .fe-footer div:nth-child(1) p{
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         text-indent: 0;
     }
     .fe-footer input, .fe-footer textarea{
@@ -29,15 +38,21 @@
     }
     .fe-navbar ul li:nth-child(1){
         margin-left: 0px;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         display: none;
     }
     .fe-navbar ul li:nth-child(4){
         margin-right: 0;
     }
     .fe-navbar ul{
-        align-items: flex-start;
-        justify-content: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         padding: 0;
         margin: 0;
     }
@@ -47,7 +62,10 @@
 }
 @media screen and (max-width: 587px) {
     .composition{
-        flex-direction: column;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
     }
     .composition div {
         padding: 0;

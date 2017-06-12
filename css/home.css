@@ -8,12 +8,38 @@ html , body{
     min-height: 100%;
     background-color: #049372;
 }
-.progress{
+.progress,.fe-navbar ul,.fe-navbar ul li,.fe-wrapper,.fe-section,.fe-footer,.intro,.composition ,.composition  div,.composition figure,
+.composition div h1,.fe-footer ,.fe-footer div:nth-child(2),.fe-footer div:nth-child(1),.fe-footer div:nth-child(1) p,.fe-footer div:nth-child(1) form,
+.fe-loader{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+}
+.progress,.fe-navbar ul li,.fe-navbar ul li,.composition figure,.fe-footer,.fe-footer div:nth-child(2),.fe-footer div:nth-child(1),.fe-loader{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.progress,.fe-navbar ul li,.intro,.composition div,.composition figure,.fe-footer,.fe-footer div:nth-child(2),.fe-footer div:nth-child(1),.fe-footer div:nth-child(1) p,.fe-loader{
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.fe-navbar ul,.composition,.fe-footer{
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+}
+.fe-section,.fe-footer,.fe-wrapper,.composition div,.fe-footer div:nth-child(2),.fe-footer div:nth-child(1),.fe-footer div:nth-child(1) form{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.progress{
     background-color: #ecf0f1;
     height: 100%;
-    justify-content: center;
-    align-items: center;
     font-size: 50px;
     font-family: 'Cabin', sans-serif;
 }
@@ -38,18 +64,19 @@ html , body{
     width: 100%;
 
 -webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-   -moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-     -o-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
         transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
-.fe-navbar ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.fe-navbar ul,.composition,.fe-footer{
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .fe-navbar ul li:nth-child(1){
-    flex: 1;
-    justify-content: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-left: 100px;
 }
 .fe-navbar ul li:nth-child(4){
@@ -61,14 +88,9 @@ html , body{
     color: #ecf0f1;
 }
 .fe-navbar ul li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
 
 -webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-   -moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-     -o-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
         transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 .fe-navbar ul li img{
@@ -76,18 +98,10 @@ html , body{
     height: 50px;
 
 -webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-   -moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-     -o-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
         transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 .fe-wrapper{
-    display: flex;
     min-height: 100%;
-    flex-direction: column;
-}
-.fe-section,.fe-footer{
-    display: flex;
-    flex-direction: column;
 }
 .intro-section{
     background: url("../images/intro-bg.jpg") center center no-repeat;
@@ -95,15 +109,14 @@ html , body{
     height: 100vh;
 }
 .intro{
-    display: flex;
     width: 100%;
     height: 100%;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 .composition{
     background-color: white;
-    flex-wrap: wrap;
 }
 .intro p{
     font-family: 'Roboto', sans-serif !important;
@@ -112,24 +125,15 @@ html , body{
     font-weight: 100;
     font-size: 40px;
 }
-
-.composition {
-    display: flex;
-    flex-direction: row;
-}
 .composition div {
     padding:20px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .composition figure{
     width: 200px;
     height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .composition div:nth-child(1) figure img{
     height: 150px;
@@ -144,30 +148,19 @@ html , body{
     width: 100px;    
     height: 100px;
 }
-.composition div h1{
-    display: flex;
-}
 .composition div p{
     text-align: center;
 }
 .fe-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background-color: #23754b;
-    flex-wrap: wrap;
 }
 .fe-footer div{
-    display: flex;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .fe-footer div:nth-child(2){
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    align-items: center;
-    justify-content: center;
 }
 .fe-footer p{
     color: #BFBFBF;
@@ -179,29 +172,24 @@ html , body{
 .fe-footer a{
     padding: 10px;
     font-size: 20px;
-    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
     color: white;
 }
 .fe-footer div:nth-child(1){
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
 }
 .fe-footer div:nth-child(1) p{
-    display: flex;
     width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    text-indent: 140px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .fe-footer div:nth-child(1) form{
     height: 400px;
     width: 400px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -ms-flex-pack: distribute; 
+        justify-content: space-around;
 }
 .fe-footer div input{
     padding: 5px;
@@ -214,16 +202,11 @@ html , body{
     display: none;
 
     -webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-   -moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-     -o-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000); 
         transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 .fe-loader{
     position: absolute;
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }

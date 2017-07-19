@@ -1,0 +1,5 @@
+Listed here are the things needs to be integrated and enhanced:
+
+ 1. UI/UX   // for both website and blog
+ 2. Comment section // for blog posts
+ 3. share buttons // for both website and blog posts
